@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Calculator</h2>
+
+<form method="POST" action="/">
+	
+
+	<select name="operator">
+		<option value="+">+</option>
+		<option value="-">-</option>
+		<option value="*">*</option>
+		<option value="/">/</option>
+	</select>
+
+	<br><br>
+
+	<input type="number" name="num1" value="{{ request.form['num1'] }}"/>
+
+	{{ operator_out }}
+
+	<input type="number" name="num2" value="{{ request.form['num2'] }}"/>
+
+	=  {{ result }}
+
+	<br><br>
+
+	<input type="submit" value="Submit">
+</form>
+
+</body>
+</html>
